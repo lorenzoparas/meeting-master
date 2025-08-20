@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
             resultDiv.innerHTML = `
                 <div class="warning-message">
                     <span class="material-icons">warning</span>
-                    <span>Add some names.</span>
+                    <span>Enter some names.</span>
                 </div>`;
             return;
         }
