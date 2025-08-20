@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Meeting Master",
+    "version": "1.0.0",
+    "description": "Pick a random person to lead the meeting.",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ]
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Who's Leading the Meeting?</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    body {
+      width: 200px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 16px;
+      margin: 0 0 15px 0;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 8px 15px 8px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+      flex: 1;
+    }
+
+    .material-icons {
+      font-size: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button.secondary {
+      background-color: #f44336;
+    }
+
+    button:hover:not(:disabled) {
+      opacity: 0.9;
+    }
+
+    button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+
+    #result {
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .warning-message {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #FFF3CD;
+      color: #856404;
+      padding: 10px 15px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: normal;
+      border-left: 4px solid #FFC107;
+      text-align: left;
+      margin: 8px 0;
+      width: 100%;
+    }
+
+    .warning-message .material-icons {
+      color: #FFC107;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    #teamMembers {
+      max-height: 360px;
+      min-height: 100px;
+      margin: 12px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Pick a meeting master</h1>
+  <div class="input-group">
+    <label for="teamMembers">Enter one name per line</label>
+    <textarea id="teamMembers" rows="8" placeholder=""></textarea>
+  </div>
+  <div class="button-group">
+    <button id="pickButton">
+      <span class="material-icons">casino</span>
+      <span>Pick</span>
+    </button>
+    <button id="removeButton" class="secondary" disabled>
+      <span class="material-icons">delete</span>
+      <span>Remove</span>
+    </button>
+  </div>
+  <div id="result"></div>
+  <script src="popup.js"></script>
+</body>
+
+</html>
